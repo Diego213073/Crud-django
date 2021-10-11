@@ -76,8 +76,10 @@ WSGI_APPLICATION = 'proyecto_init.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'localhost:1521/xepdb1',
+        'USER': 'hr',
+        'PASSWORD':'hr',
     }
 }
 
