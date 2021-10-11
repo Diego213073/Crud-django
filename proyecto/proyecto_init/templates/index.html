@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Hola mundo</h1>
+
+    <h1>{% block titulo%}CRUD DJANGO{%endblock titulo%}</h1>
+   {%block crearUs %} <a href="{% url 'crear_persona' %}">crear un nuevo contacto</a> {%endblock crearUs %}
+    {%block cuerpo %}
+    <table border="1">
+        <tr>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>teléfono</th>
+            <th>correo</th>
+            <th colspan="2">ACCIÓN</th>
+        </tr>
+
+        {% for persona in personas%}
+        <tr>
+            <td>{{persona.nombres}}</td>
+            <td>{{persona.apellidos}}</td>
+            <td>{{persona.telefono}}</td>
+            <td>{{persona.correo}}</td>
+            <td><a href="{% url 'editar_persona' persona.id %}">editar</a></td>
+            <td><a href="{% url 'eliminar' persona.id %}">eliminar</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    {%endblock cuerpo %}
 </body>
+
 </html>

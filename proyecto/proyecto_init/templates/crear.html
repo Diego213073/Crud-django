@@ -1,0 +1,10 @@
+{%extends 'index.html' %}
+{% block titulo%}CREAR CONTACTO{%endblock titulo%}
+{%block crearUs %}{%endblock crearUs %}
+{%block cuerpo %}
+<form action="" method="post">
+    {%csrf_token%}
+  {{formulario}}
+  <button>CREAR O EDITAR USUARIO</button>
+</form>
+{%endblock cuerpo %}

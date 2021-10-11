@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from aplicaciones.principal.views import vistaInicio
+from aplicaciones.principal.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',vistaInicio,name ='index'),
+    path('',listarPersonas,name ='index'),
+    path('crear/',crearPersona,name ='crear_persona'),
+    path('editar/<int:id>/',editarPersona,name ='editar_persona'),
+    path('eliminar/<int:id>/',eliminar,name ='eliminar'),
 ]
