@@ -5,27 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block estilos %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&display=swap" rel="stylesheet">
+    {%endblock estilos %}
     <title>Lista de contactos</title>
 </head>
 
 <body>
-
-    <header><h1>DJANGO LISTA DE CONTACTOS</h1></header>
+    {%block cuerpo %}
+    <header><h1>LISTA DE CONTACTOS</h1></header>
 
     <main class="integrantes">
-       <div>diego</div>
-       <div>Andrés</div>
-       <div>Lev</div>
-       <div>Jocelyn</div>
+       <div class="lev"><h2>Lev Mile Paredes</h2>
+       </div>
+       <div></div>
+       <div></div>
+       <div></div>
     </main>
     <main class="contenido">
         <article> {%block crearUs %} <div class="btn-accion"><a href="{% url 'crear_persona' %}">crear nuevo
                     contacto</a></div>
             {%endblock crearUs %}</article>
-        <article>{%block cuerpo %}
+        <article>
             <table>
                 <tr>
                     <th class="ultima-columna-nombre">nombre</th>
@@ -51,9 +54,9 @@
                 {% endfor %}
 
             </table>
-            {%endblock cuerpo %}</article>
+            </article>
     </main>
-    <footer>Pié de página</footer>
+    {%endblock cuerpo %}
 </body>
 
 </html>
