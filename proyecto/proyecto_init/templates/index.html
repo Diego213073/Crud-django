@@ -5,36 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&display=swap" rel="stylesheet">
+    <title>Lista de contactos</title>
 </head>
 
 <body>
 
-    <h1>{% block titulo%}CRUD DJANGO{%endblock titulo%}</h1>
-   {%block crearUs %} <a href="{% url 'crear_persona' %}">crear un nuevo contacto</a> {%endblock crearUs %}
-    {%block cuerpo %}
-    <table border="1">
-        <tr>
-            <th>nombre</th>
-            <th>apellido</th>
-            <th>teléfono</th>
-            <th>correo</th>
-            <th colspan="2">ACCIÓN</th>
-        </tr>
+    <header><h1>DJANGO LISTA DE CONTACTOS</h1></header>
 
-        {% for persona in personas%}
-        <tr>
-            <td>{{persona.nombres}}</td>
-            <td>{{persona.apellidos}}</td>
-            <td>{{persona.telefono}}</td>
-            <td>{{persona.correo}}</td>
-            <td><a href="{% url 'editar_persona' persona.id %}">editar</a></td>
-            <td><a href="{% url 'eliminar' persona.id %}">eliminar</a></td>
-        </tr>
-        {% endfor %}
+    <main class="integrantes">
+       <div>diego</div>
+       <div>Andrés</div>
+       <div>Lev</div>
+       <div>Jocelyn</div>
+    </main>
+    <main class="contenido">
+        <article> {%block crearUs %} <div class="btn-accion"><a href="{% url 'crear_persona' %}">crear nuevo
+                    contacto</a></div>
+            {%endblock crearUs %}</article>
+        <article>{%block cuerpo %}
+            <table>
+                <tr>
+                    <th class="ultima-columna-nombre">nombre</th>
+                    <th>apellido</th>
+                    <th>teléfono</th>
+                    <th>correo</th>
+                    <th class="ultima-columna" colspan="2">ACCIÓN</th>
+                </tr>
 
-    </table>
-    {%endblock cuerpo %}
+                {% for persona in personas%}
+                <tr>
+                    <td class="ultima-columna-nombre">{{persona.nombres}}</td>
+                    <td>{{persona.apellidos}}</td>
+                    <td>{{persona.telefono}}</td>
+                    <td>{{persona.correo}}</td>
+                    <td>
+                        <div class="btn-accion"><a href="{% url 'editar_persona' persona.id %}">editar</a></div>
+                    </td>
+                    <td class="ultima-columna">
+                        <div class="btn-eliminar"><a href="{% url 'eliminar' persona.id %}">eliminar</a></div>
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </table>
+            {%endblock cuerpo %}</article>
+    </main>
+    <footer>Pié de página</footer>
 </body>
 
 </html>
