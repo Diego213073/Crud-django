@@ -4,6 +4,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../imagenes/blanco.jpg');
+    background-size: cover;
 }
 
 html,body{

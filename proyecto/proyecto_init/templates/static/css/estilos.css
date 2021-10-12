@@ -5,6 +5,8 @@ body {
     grid-template-columns: 1fr 500px 800px;
     grid-template-rows: 100px 1fr;
     font-family: 'Fira Sans Condensed', sans-serif;
+    background-image: url('../imagenes/blanco.jpg');
+    background-size: cover;
 
 }
 
@@ -43,8 +45,8 @@ main>div {
 
 main>div:hover {
     cursor: pointer;
-    color: rgb(27, 241, 20);
-    box-shadow: 2px 3px 10px 6px rgb(116, 214, 124);
+    color: rgb(248, 193, 13);
+    box-shadow: 2px 3px 10px 6px rgb(226, 206, 174);
 }
 
 .contenido {
@@ -73,7 +75,7 @@ table {
 
 
 table th {
-    background-image: linear-gradient(rgb(49, 233, 73), rgb(148, 245, 245));
+    background-image: linear-gradient(rgb(96, 228, 228),rgb(240, 196, 131) );
     color: white;
     padding: 10px;
     border-right: 1px solid rgb(174, 230, 177);
@@ -101,7 +103,7 @@ table td {
     border: 3px solid rgb(27, 241, 20);
     border-radius: 10px;
     text-align: center;
-    background-image: linear-gradient(to right, rgb(49, 233, 73), rgb(148, 245, 245), rgb(144, 224, 144));
+    background-image: linear-gradient(to right,rgb(145, 242, 242),rgb(240, 196, 131), rgb(242, 206, 89));
 }
 
 .btn-accion a {
