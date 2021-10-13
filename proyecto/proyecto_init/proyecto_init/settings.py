@@ -75,13 +75,15 @@ WSGI_APPLICATION = 'proyecto_init.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'localhost:1521/xepdb1',
-        'USER': 'hr',
-        'PASSWORD':'hr',
-    }
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'djangodb',  
+        'USER':'root',  
+        'PASSWORD':'12345',  
+        'HOST':'localhost',  
+        'PORT':'3306'  
+    }  
 }
 
 
