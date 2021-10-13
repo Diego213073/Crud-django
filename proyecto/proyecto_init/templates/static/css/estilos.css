@@ -7,7 +7,6 @@ body {
     font-family: 'Fira Sans Condensed', sans-serif;
     background-image: url('../imagenes/blanco.jpg');
     background-size: cover;
-
 }
 
 body,
@@ -73,14 +72,12 @@ table {
     box-shadow: 3px 2px 4px 2px rgb(235, 230, 230);
 }
 
-
 table th {
-    background-image: linear-gradient(rgb(96, 228, 228),rgb(240, 196, 131) );
+    background-image: linear-gradient(rgb(96, 228, 228), rgb(240, 196, 131));
     color: white;
     padding: 10px;
     border-right: 1px solid rgb(174, 230, 177);
 }
-
 
 table td {
     font-weight: bold;
@@ -103,7 +100,7 @@ table td {
     border: 3px solid rgb(27, 241, 20);
     border-radius: 10px;
     text-align: center;
-    background-image: linear-gradient(to right,rgb(145, 242, 242),rgb(240, 196, 131), rgb(242, 206, 89));
+    background-image: linear-gradient(to right, rgb(145, 242, 242), rgb(240, 196, 131), rgb(242, 206, 89));
 }
 
 .btn-accion a {
@@ -132,9 +129,22 @@ table td {
     cursor: pointer;
 }
 
-
-.lev{
-    background-image:url('../imagenes/lev.jfif');
+.lev {
+    background-image: url('../imagenes/lev.jfif');
     background-size: cover;
 }
 
+.andres {
+    background-image: url('../imagenes/aa.jpg');
+    background-size: cover;
+}
+
+.jocelyn {
+    background-image: url('../imagenes/jo.jpg');
+    background-size: cover;
+}
+
+.diego {
+    background-image: url('../imagenes/dd.jpg');
+    background-size: cover;
+}
